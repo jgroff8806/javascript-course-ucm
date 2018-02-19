@@ -9,10 +9,10 @@
   margin-top: 40px;
   padding-left: 15px;
   padding-right: 15px;
-  width: 1170;
+  width: 1170px;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 28px;
 }
 
 .jumbotron {
@@ -44,16 +44,8 @@
   padding-right: 40px;
 }
 
-.text-center {
-  color: white;
-}
-
 h1 {
   font-variant: small-caps;
-}
-
-.h3-text-center {
-  text-align: center;
 }
 
 .caption {
