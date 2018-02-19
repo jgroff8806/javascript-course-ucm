@@ -11,7 +11,7 @@
   padding-right: 15px;
   width: 1170px;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 18px;
+  font-size: 1.28em;
   line-height: 38px;
 }
 
@@ -48,11 +48,23 @@ h1 {
   font-variant: small-caps;
 }
 
+h3 {
+  font-size: 1.4em;
+}
+
 .caption {
   font-variant: small-caps;
-  font-size: 18px;
+  font-size: 1.25em;
 }
 
 a {
   color: #004687;
+}
+
+blockquote {
+  font-size: 1.5em;
+}
+
+.blockquote-footer {
+  color: black;
 }
