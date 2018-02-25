@@ -4,17 +4,56 @@
   <title>
     Java Script Basics
   </title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>
-    Sum of Two Numbers
-  </h1>
-  <input type="text" id="num1" placeholder="Number 1"></input>
-  <br>
-  <input type="text" id="num2" placeholder="Number 2"></input>
-  <br>
-  <button onclick="sum()">Add</button>
+  <div class="flex-container">
+    <div class="addSection">
+      <h2>
+        Addition
+      </h2>
+      <input type="text" id="addNum1" placeholder="Number 1"></input>
+      <br>
+      <input type="text" id="addNum2" placeholder="Number 2"></input>
+      <br>
+      <button onclick="sum()">Add</button>
+    </div>
+
+    <div class="subtractSection">
+      <h2>
+        Subtraction
+      </h2>
+      <input type="text" id="subNum1" placeholder="Number 1"></input>
+      <br>
+      <input type="text" id="subNum2" placeholder="Number 2"></input>
+      <br>
+      <button onclick="difference()">Subtract</button>
+    </div>
+
+    <div class="multiplySection">
+      <h2>
+        Multiplication
+      </h2>
+      <input type="text" id="multNum1" placeholder="Number 1"></input>
+      <br>
+      <input type="text" id="multNum2" placeholder="Number 2"></input>
+      <br>
+      <button onclick="product()">Multiply</button>
+    </div>
+
+    <div class="divideSection">
+      <h2>
+        Division
+      </h2>
+      <input type="text" id="divNum1" placeholder="Number 1"></input>
+      <br>
+      <input type="text" id="divNum2" placeholder="Number 2"></input>
+      <br>
+      <button onclick="quotient()">Divide</button>
+    </div>
+  </div>
+
 
   <script src="sum.js">
   </script>
