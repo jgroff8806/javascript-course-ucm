@@ -1,3 +1,8 @@
+/*
+  Create functions to calculate the area and perimeter of a rectangle
+  Output their value on click of two buttons
+*/
+
 function area() {
   var areaHeight = parseInt(document.getElementById("height").value);
   var areaWidth = parseInt(document.getElementById("width").value);
