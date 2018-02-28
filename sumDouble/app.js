@@ -3,7 +3,7 @@
 
 /* 
   Function sumDouble() takes in two input values and converts them to integers
-  If the two values input are the same, the function gives thee sum, doubles it, and displays sumDoubleAnswer as an alert
+  If the two values input are the same, the function gives the sum, doubles it, and displays sumDoubleAnswer as an alert
   If the two values input are different, the function gives the sum and displays sumAnswer as an alert
 */
 
