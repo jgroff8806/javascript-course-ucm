@@ -1,6 +1,12 @@
 function isParrotInTrouble(isTalking, hour) {
-  // If parrot not talking -> parrot not in trouble -> return false
-  // else if - hour is < 7 or > 20 -> parrot is in trouble -> return true
+  /* range 0 - 23
+  If (parrot not talking)
+    parrot not in trouble 
+    return false
+  else if (parrot is talking) 
+    parrot is in trouble
+    return true 
+  */
 
   if (hour < 20) {
     return true;
