@@ -1,3 +1,8 @@
+/*
+  Create two functions to calculate the area and circumference of a circle
+  Output those values
+*/
+
 // Calculate area of circle function
 function area() {
   var radius = parseInt(document.getElementById("radius").value);
