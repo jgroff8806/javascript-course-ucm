@@ -1,3 +1,8 @@
+/*
+  Create functions to solve basic arithmetic 
+  Such as addition, subtraction, multiplicatin and division
+*/
+
 // Addition function
 function sum() {
   var addNum1 = parseInt(document.getElementById("addNum1").value);
