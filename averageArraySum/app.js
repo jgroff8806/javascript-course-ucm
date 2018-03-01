@@ -3,10 +3,28 @@
   Once you have the sum FIND the average of the sum
 */
 
-var sum = [1, 2, 5, 15, 25, 50].reduce(add, 0);
+var myArray = [1, 2, 5, 15, 25, 50];
 
-function add(a, b) {
-  return a + b;
+// This function calculates the sum
+function sum(arr) {
+  var arrSum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    arrSum += myArray[i];
+  }
+  return arrSum;
 }
 
-console.log(sum);
+// This function calculates the average of the sum
+function average(sum, totalItems) {
+  return sum / totalItems;
+}
+
+// This function calculates the sum and find the average of that sum
+function calcAverage(arr) {
+  var arrSum = sum(arr);
+  var arrAvg = average(arrSum, arr.length);
+  console.log(arrAvg);
+  return arrAvg;
+}
+
+// calcAverage(myArray);
