@@ -4,15 +4,12 @@
   Return false if one is greater than 0 and the other is greater than 100
 */
 
-function tempEval() {
-  var temp1 = parseInt(document.getElementById("temp1").value);
-  var temp2 = parseInt(document.getElementById("temp2").value);
-
-  if (temp1 > 0 && temp2 < 100) {
-    return false;
-  } else if (temp1 < 0 && temp2 > 100) {
+function tempEval(temp1, temp2) {
+  if ((temp1 < 0 && temp2 > 100) || (temp1 > 100 && temp2 < 0)) {
+    console.log("true");
     return true;
+  } else if ((temp1 > 0 && temp2 > 100) || (temp1 > 100 && temp2 > 0)) {
+    console.log("false");
+    return false;
   }
 }
-
-console.log(tempEval());
