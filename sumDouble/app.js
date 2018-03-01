@@ -11,4 +11,4 @@ function sumDouble(num1, num2) {
   }
 }
 
-sumDouble(2, 2);
+// sumDouble(2, 2);
