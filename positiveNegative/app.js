@@ -19,3 +19,6 @@ function evalPosNeg(num1, num2, negative) {
   console.log("false");
   return false;
 }
+
+// create a function to change
+var funButton = function() {};

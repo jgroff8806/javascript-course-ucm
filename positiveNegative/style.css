@@ -1,0 +1,10 @@
+/*
+  Create styles for showing evalPosNeg function values
+  Example: if both numbers are negative, color the output
+  to red. If both numbers are positive, color the output to green.
+  If one number is positive and one is negative, color it blue.
+*/
+
+.resultValues {
+  border: 3px solid red;
+}
