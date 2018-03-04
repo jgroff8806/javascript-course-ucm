@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    Sum Double
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+</head>
+
+<body class="full-page-height">
+  <div class="container full-height">
+    <div class="row justify-content-center align-items-center full-height">
+      <div class="md-col-6">
+        <h1 class="h1">Sum Double</h1>
+        <form onsubmit="sumDouble(event)">
+          <div class="form-group">
+            <label for="num1">Number 1</label>
+            <input type="text" class="form-control" name="num1" id="num1" aria-describedby="num1" placeholder="Enter Number 1">
+            <label for="num2">Number 2</label>
+            <input type="text" class="form-control" name="num2" id="num2" aria-describedby="num2" placeholder="Enter Number 2">
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+        <h4 class="center header-padding">
+          The answer is:
+        </h4>
+        <p id="answer" class="center">-</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js">
+  </script>
+</body>
+
+</html>
