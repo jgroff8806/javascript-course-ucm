@@ -6,17 +6,40 @@
     Positive Negative
   </title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
-  <div>
-    <p id="resultValues">Test content</p>
-    <button onclick="funButton()">Fun Button</button>
-
+<body class="full-page-height">
+  <div class="container full-height">
+    <div class="row justify-content-center align-items-center full-height">
+      <div class="md-col-6">
+        <h2 class="h2">Positive Negative</h2>
+        <form onsubmit="evalPosNeg(event)">
+          <div class="form-group">
+            <label for="num1">Number 1</label>
+            <input type="text" class="form-control" name="num1" id="num1" aria-describedby="num1" placeholder="Enter Number 1">
+            <label for="num2">Number 2</label>
+            <input type="text" class="form-control" name="num2" id="num2" aria-describedby="num2" placeholder="Enter Number 2">
+            <div class="form-check">
+              <input type="checkbox" name="negativeCheck" class="form-check-input" id="negativeCheck">
+              <label class="form-check-label" for="negativeCheck">Negative</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <h4 class="center header-padding">
+          Is number positive?
+        </h4>
+        <p id="answer" class="center">-</p>
+      </div>
+    </div>
   </div>
 
-  <script src="app.js">
-  </script>
+
+
+  <script src="app.js"></script>
 </body>
 
 </html>
