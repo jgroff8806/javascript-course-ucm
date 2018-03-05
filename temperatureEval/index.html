@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Temperature Evaluation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+</head>
+
+<body class="body-container">
+  <div class="container full-height">
+    <div class="row justify-content-center align-items-center full-height">
+      <div class="md-col-6">
+        <h1 class="h1 text-info text-warning">Temperature Evaluation</h1>
+        <form onsubmit="tempEval(event)">
+          <div class="form-group">
+            <label for="temp1">Temperature 1</label>
+            <input type="text" class="form-control" name="temp1" id="temp1" aria-describedby="temp1" placeholder="Enter Temperature 1">
+            <label for="temp2">Temperature 2</label>
+            <input type="text" class="form-control" name="temp2" id="temp2" aria-describedby="temp2" placeholder="Enter Temperature 2">
+          </div>
+          <button type="submit" class="btn btn-warning">Evaluate</button>
+        </form>
+        <h4 class="text-info center header-padding">
+          Is temperature icy hot?
+        </h4>
+        <span class="temp-result">
+          <p id="result" class="center">-</p>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js">
+  </script>
+</body>
+
+</html>
