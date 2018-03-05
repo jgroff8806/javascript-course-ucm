@@ -1,0 +1,22 @@
+.body-container {
+  height: 100vh;
+  background-color: #083d76;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.h1 {
+  font-variant: small-caps;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.number {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+  margin: 0;
+  color: #ebecd3;
+}
