@@ -1,0 +1,40 @@
+<!-- Write a JavaScript program to calculate the volume of a sphere -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+    Volume of a Sphere
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+</head>
+
+<body class="body-container">
+  <div class="container full-height">
+    <div class="row justify-content-center align-items-center full-height">
+      <div class="md-col-6">
+        <h1 class="h1 text-warning">Volume of a Sphere</h1>
+        <form onsubmit="calcSphere(event)">
+          <div class="form-group">
+            <label for="radius">Radius</label>
+            <input type="text" class="form-control" name="radius" id="radius" aria-describedby="radius" placeholder="Enter Radius">
+            <label for="volume">The Volume of the Sphere is:</label>
+            <input type="text" class="form-control" name="volume" id="volume" aria-describedby="volume" placeholder="0.0000">
+          </div>
+          <button type="submit" class="btn btn-warning">Calculate</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js">
+  </script>
+</body>
+
+</html>
