@@ -9,10 +9,11 @@ var menu = {
 
 var output = "";
 for (var property in menu) {
-  output += property + ": " + " " + menu[property] + "\n" + "\n";
+  output += property + ": " + " " + menu[property] + "\n";
 }
-alert(output);
+console.log(output);
 
+// Object keys
 // console.log(Object.keys(menu));
 
 /*
