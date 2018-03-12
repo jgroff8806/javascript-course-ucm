@@ -1,3 +1,4 @@
+// Write a program that sums all the elements in an array
 var myArray = [5, 10, 15, 20];
 
 var sum = 0;
