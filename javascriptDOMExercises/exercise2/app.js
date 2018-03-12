@@ -6,7 +6,6 @@ var getFormvalue = function(e) {
   var lastName = document.querySelector("input[name=lname]").value;
   // Output the values of firstName / lastName
   alert(firstName + " " + lastName);
-
   console.log(firstName);
   console.log(lastName);
 };
