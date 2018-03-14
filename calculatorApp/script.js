@@ -22,7 +22,7 @@ Functions to create:
 // This will help us find out which button is clicked
 // onclick function(event)
 
-function onclick(evt) {
+function onClick(evt) {
   var char = event.target.innerText;
   if (isOperator(char)) {
     if (input1.value) {
@@ -40,7 +40,7 @@ function onclick(evt) {
 
 // isoperator function, to know whether user has click on operator buttons (+ - * / =)
 function isOperator() {
-  //
+  // list each operator "+, -, *, /, =, del, res"
 }
 
 // reset function to empty or reset the calculator
@@ -56,7 +56,12 @@ function del() {
 // function to remove character (for delete function)
 
 // function for calculate() to calculate input numbers and operators
-function calculate() {}
+function calculate() {
+  //add
+  //subtract
+  //multiply
+  //divide
+}
 
 // error handling for character
 try {
