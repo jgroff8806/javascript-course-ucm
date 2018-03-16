@@ -25,7 +25,8 @@ mongoose.connect("mongodb://localhost:27017/contact-app");
 
 var contactSchema = new mongoose.Schema({
   firstName: String,
-  lastName: String
+  lastName: String,
+  created_at: { type: Date, default: Date.now() }
 });
 var Contact = mongoose.model("ContactInfo", contactSchema);
 
@@ -37,6 +38,10 @@ app.get("/", (req, res) => {
   // sendFile is a method in express framework that sends file back
   // to the client
   res.sendFile(__dirname + "/index.html");
+});
+
+app.get("/style.css", (req, res) => {
+  res.sendFile(__dirname + "/style.css");
 });
 
 app.post("/saveContact", (req, res) => {
