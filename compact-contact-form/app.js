@@ -12,14 +12,14 @@ app.use(
 
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/contact-app");
+mongoose.connect("mongodb://localhost:27017/compact-contact-form");
 
-var contactSchema = new mongoose.Schema({
+var compactContactSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
   created_at: { type: Date, default: Date.now() }
 });
-var Contact = mongoose.model("ContactInfo", contactSchema);
+var Contact = mongoose.model("ContactInfo", compactContactSchema);
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
@@ -29,11 +29,11 @@ app.get("/style.css", (req, res) => {
   res.sendFile(__dirname + "/style.css");
 });
 
-app.post("/saveContact", (req, res) => {
+app.post("/saveContactInfo", (req, res) => {
   console.log("My request" + req);
   console.log("My request body" + req.body);
-  var myData = new Contact(req.body);
-  myData
+  var myContactData = new Contact(req.body);
+  myContactData
     .save()
     .then(item => {
       res.send("Name saved to database");
