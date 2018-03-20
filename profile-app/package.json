@@ -1,21 +1,19 @@
 {
   "name": "profile-app",
   "version": "1.0.0",
-  "description": "App to store profile info in MongoDB",
+  "description": "App to save profile information",
   "main": "app.js",
   "scripts": {
     "test": "node, mongoose, mongo, profile"
   },
-  "keywords": [
-    "node",
-    "mongodb",
-    "mongoose",
-    "profile"
-  ],
+  "keywords": ["node", "mongoose", "mongo", "profile-app"],
   "author": "Jason Groff",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "mongoose": "^5.0.10"
+    "mongoose": "^5.0.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.2"
   }
 }
