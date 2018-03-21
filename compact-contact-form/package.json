@@ -6,10 +6,16 @@
   "scripts": {
     "test": "node, mongodob, mongoose, compact-contact-form"
   },
-  "keywords": ["node", "mongodb", "mongoose", "compact-contact-form"],
+  "keywords": [
+    "node",
+    "mongodb",
+    "mongoose",
+    "compact-contact-form"
+  ],
   "author": "Jason Groff",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.16.3",
     "mongoose": "^5.0.11"
   },
