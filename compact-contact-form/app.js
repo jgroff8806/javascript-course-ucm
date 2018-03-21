@@ -17,26 +17,28 @@ mongoose.connect("mongodb://localhost:27017/compact-contact-form");
 var compactContactSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
+  email: String,
+  subject: [],
+  message: String,
   created_at: { type: Date, default: Date.now() }
 });
-var Contact = mongoose.model("ContactInfo", compactContactSchema);
+var CompactContact = mongoose.model("CompactContactApp", compactContactSchema);
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
+// Get request for style.css file
 app.get("/style.css", (req, res) => {
   res.sendFile(__dirname + "/style.css");
 });
 
-app.post("/saveContactInfo", (req, res) => {
-  console.log("My request" + req);
-  console.log("My request body" + req.body);
-  var myContactData = new Contact(req.body);
-  myContactData
+app.post("/saveCompactContact", (req, res) => {
+  var contactData = new CompactContact(req.body);
+  contactData
     .save()
     .then(item => {
-      res.send("Name saved to database");
+      res.send("Info saved to database");
     })
     .catch(err => {
       res.status(400).send("Unable to save to database");

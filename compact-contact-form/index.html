@@ -7,23 +7,19 @@
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
 </head>
 
 <body>
   <div class="container">
-    <form class="well span8">
+    <form class="well span8" action="/saveCompactContact" , method="post">
       <div class="row">
         <div class="span3">
           <label>First Name</label>
-          <input class="span3" placeholder="Your First Name" type="text">
+          <input type="text" class="span3" name="firstName" id="firstName" placeholder="Your First Name">
           <label>Last Name</label>
-          <input class="span3" placeholder="Your Last Name" type="text">
+          <input type="text" class="span3" name="lastName" id="lastName" placeholder="Your Last Name">
           <label>Email Address</label>
-          <input class="span3" placeholder="Your email address" type="text">
+          <input type="text" class="span3" name="email" id="email" placeholder="Your email address">
           <label>Subject</label>
           <select class="span3" id="subject" name="subject">
             <option selected value="na">
@@ -54,7 +50,8 @@
     </form>
   </div>
 
-  <script src="app.js"></script>
+  <script src="app.js">
+  </script>
 </body>
 
 </html>
