@@ -30,7 +30,15 @@ var compactContactSchema = new mongoose.Schema({
 var CompactContact = mongoose.model("CompactContactApp", compactContactSchema);
 
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  CompactContact.find((err, result) => {
+    // If unable to get results
+    // log the error to the console
+    if (err) return console.log(err);
+    // If success render index.ejs and assign results to
+    // a templating variable named contacts that we can access
+    // in index.ejs
+    res.render("index.ejs", { contacts: result });
+  });
 });
 
 // Get request for style.css file
