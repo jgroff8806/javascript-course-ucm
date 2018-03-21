@@ -28,7 +28,7 @@ var compactContactSchema = new mongoose.Schema({
   created_at: { type: Date, default: Date.now() }
 });
 var CompactContact = mongoose.model("CompactContactApp", compactContactSchema);
-
+//
 app.get("/", (req, res) => {
   CompactContact.find((err, result) => {
     // If unable to get results
