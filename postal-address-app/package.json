@@ -6,12 +6,7 @@
   "scripts": {
     "test": "node, mongodb, mongoose, postal-address-app"
   },
-  "keywords": [
-    "node",
-    "mongodb",
-    "mongoose",
-    "postal-address-app"
-  ],
+  "keywords": ["node", "mongodb", "mongoose", "postal-address-app"],
   "author": "Jason Groff",
   "license": "ISC",
   "dependencies": {
