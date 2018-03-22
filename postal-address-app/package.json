@@ -1,0 +1,25 @@
+{
+  "name": "postal-address-app",
+  "version": "1.0.0",
+  "description": "App to store postal address information",
+  "main": "app.js",
+  "scripts": {
+    "test": "node, mongodb, mongoose, postal-address-app"
+  },
+  "keywords": [
+    "node",
+    "mongodb",
+    "mongoose",
+    "postal-address-app"
+  ],
+  "author": "Jason Groff",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.2"
+  }
+}
