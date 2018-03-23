@@ -51,11 +51,20 @@ app.post("/saveCompactContact", (req, res) => {
   contactData
     .save()
     .then(item => {
-      res.send("Info saved to database");
+      res.redirect("/displayResults");
     })
     .catch(err => {
       res.status(400).send("Unable to save to database");
     });
+});
+
+// Query to find property of CompactContact schema and display
+// the filtered results on a seperate page
+app.get("/displayResults", (req, res) => {
+  CompactContact.find({ firstName: "John" }, (err, result) => {
+    if (err) return console.log(err);
+    res.render("results.ejs", { contacts: result });
+  });
 });
 
 app.listen(port, () => {

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Results</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+
+<body>
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Email</th>
+          <th scope="col">Subject</th>
+          <th scope="col">Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i = 0; i < contacts.length; i++) {%>
+          <tr>
+            <td>
+              <span>
+                <%= i + 1 %>
+              </span>
+            </td>
+            <td>
+              <span>
+                <%= contacts[i].firstName %>
+              </span>
+            </td>
+            <td>
+              <span>
+                <%= contacts[i].lastName %>
+              </span>
+            </td>
+            <td>
+              <span>
+                <%= contacts[i].email %>
+              </span>
+            </td>
+            <td>
+              <span>
+                <%= contacts[i].subject %>
+              </span>
+            </td>
+            <td>
+              <span>
+                <%= contacts[i].message %>
+              </span>
+            </td>
+          </tr>
+          <% } %>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
