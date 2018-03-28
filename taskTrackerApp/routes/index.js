@@ -12,3 +12,14 @@ router.get("/tasks", function(req, res) {
 });
 
 module.exports = router;
+
+/* GET tasklist page. */
+router.get("/tasklist", function(req, res) {
+  var db = req.db;
+  var collection = db.get("usercollection");
+  collection.find({}, {}, function(e, docs) {
+    res.render("tasklist", {
+      userlist: docs
+    });
+  });
+});
