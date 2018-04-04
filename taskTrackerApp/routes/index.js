@@ -15,9 +15,12 @@ router.get("/tasks", function(req, res) {
 router.get("/tasklist", function(req, res) {
   var db = req.db;
   var collection = db.get("usercollection");
+  var data = collection.find({});
   collection.find({}, {}, function(e, docs) {
-    res.render("tasklist", {
-      userlist: docs
+    data.on("success", function(docs) {
+      res.render("tasklist", {
+        tasks: docs
+      });
     });
   });
 });
