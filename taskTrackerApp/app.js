@@ -25,6 +25,10 @@ app.use(function(req, res, next) {
   req.db = db;
   next();
 });
+
+
+// app.use(favicon(dirname + '/public/favicon.ico'));
+=======
 //app.use(favicon(dirname + '/public/favicon.ico'));
 app.use(logger("dev"));
 app.use(bodyParser.json());

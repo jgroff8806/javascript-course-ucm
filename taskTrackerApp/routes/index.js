@@ -12,17 +12,27 @@ router.get("/tasks", function(req, res) {
 });
 
 /* GET tasklist page. */
+router.get('/tasklist', function(req, res) {
+    var db = req.db;
+    var collection = db.get('usercollection');
+    collection.find({},{},function(e,docs){
+        res.render('tasklist', {
+            "tasklist" : docs
+        });
+    });
+});
+/* GET tasklist page. 
 router.get("/tasklist", function(req, res) {
   var db = req.db;
   var collection = db.get("usercollection");
   var data = collection.find({});
-  data.on("success", function(docs) {
+  data.on('success', function(docs){
     res.render("tasklist", {
       tasks: docs
     });
   });
 });
-
+*/
 /* GET New TASK page. */
 router.get("/addtask", function(req, res) {
   res.render("addtask", { title: "Add New Task" });
