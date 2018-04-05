@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 
 /* GET home page. */
-router.get("/", function(req, res) {
+router.get("/", function(req, res, next) {
   res.render("index", { title: "Express" });
 });
 
@@ -11,7 +11,7 @@ router.get("/tasks", function(req, res) {
   res.render("tasks", { title: "Task Tracker !" });
 });
 
-/* GET tasklist page */
+/* GET tasklist page. */
 router.get("/tasklist", function(req, res) {
   var db = req.db;
   var collection = db.get("usercollection");
@@ -21,20 +21,6 @@ router.get("/tasklist", function(req, res) {
     });
   });
 });
-
-// GET tasklist page. //
-/*
-router.get("/tasklist", function(req, res) {
-  var db = req.db;
-  var collection = db.get("usercollection");
-  var data = collection.find({});
-  data.on("success", function(docs) {
-    res.render("tasklist", {
-      tasks: docs
-    });
-  });
-});
-*/
 
 /* GET New TASK page. */
 router.get("/addtask", function(req, res) {
