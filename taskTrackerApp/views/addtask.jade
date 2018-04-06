@@ -1,8 +1,19 @@
 extends layout
 
 block content
-    h1= title
-    form#formAddTask(name="addtask",method="post",action="/addtask")
-        input#inputTaskName(type="text", placeholder="taskname", name="taskname")
-        input#inputTaskDesc(type="text", placeholder="taskdesc", name="taskdesc")
-        button#btnSubmit(type="submit") submit
+    .container
+
+        h1= title
+        form#formAddTask(name="addtask",method="post",action="/addtask")
+            input.input-block-level#inputTaskName(type="text", placeholder="taskname", name="taskname")
+            input#inputTaskDesc(type="text", placeholder="taskdesc", name="taskdesc")
+            button.btn.btn-large.btn-primary#btnSubmit(type="submit") Submit
+
+//-
+    form.form-signin(action="/login", method="post")
+    h2.form-signin-heading Please sign in
+    input.input-block-level(type="text", name="username", placeholder="Email address")
+    input.input-block-level(type="password", name="password", placeholder="Password")
+    label.checkbox.
+        <input type="checkbox" value="remember-me" /> Remember me
+    button.btn.btn-large.btn-primary(type="submit") Sign in
