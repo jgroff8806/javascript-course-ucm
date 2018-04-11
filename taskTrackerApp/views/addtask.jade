@@ -5,15 +5,10 @@ block content
 
         h1= title
         form#formAddTask(name="addtask",method="post",action="/addtask")
-            input.input-block-level#inputTaskName(type="text", placeholder="taskname", name="taskname")
-            input#inputTaskDesc(type="text", placeholder="taskdesc", name="taskdesc")
-            button.btn.btn-large.btn-primary#btnSubmit(type="submit") Submit
-
-//-
-    form.form-signin(action="/login", method="post")
-    h2.form-signin-heading Please sign in
-    input.input-block-level(type="text", name="username", placeholder="Email address")
-    input.input-block-level(type="password", name="password", placeholder="Password")
-    label.checkbox.
-        <input type="checkbox" value="remember-me" /> Remember me
-    button.btn.btn-large.btn-primary(type="submit") Sign in
+            input.input-block-level#inputTaskName(type="text", placeholder="Task Name", name="taskname")
+            #[br]
+            #[br]
+            input#inputTaskDesc(type="text", placeholder="Task Description", name="taskdesc")
+            #[br]
+            #[br]
+            button.btn.btn-primary#btnSubmit(type="submit") Submit
