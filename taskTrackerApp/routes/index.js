@@ -43,7 +43,7 @@ router.post("/addtask", function(req, res) {
   collection.insert(
     {
       task: taskName,
-      desc: taskDesc
+      description: taskDesc
     },
     function(err, doc) {
       if (err) {
