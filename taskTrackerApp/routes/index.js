@@ -57,6 +57,4 @@ router.post("/addtask", function(req, res) {
   );
 });
 
-// Remove task function
-
 module.exports = router;
