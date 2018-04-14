@@ -6,17 +6,13 @@ router.get("/", function(req, res, next) {
   res.render("index", { title: "Task Tracker" });
 });
 
-/* GET TaskTracker page. */
-router.get("/tasks", function(req, res) {
-  res.render("tasks", { title: "Task Tracker !" });
-});
-
 /* GET tasklist page. */
 router.get("/tasklist", function(req, res) {
   var db = req.db;
   var collection = db.get("usercollection");
   collection.find({}, {}, function(e, docs) {
     res.render("tasklist", {
+      title: "Task List",
       tasklist: docs
     });
   });
