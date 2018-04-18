@@ -1,21 +1,29 @@
 extends layout
 
 block content
-  .container
-    
-    h1.
-      Task List
-    ul
-      each task, i in tasklist
-        li
-          task.task= task.description
-      //- Suedo code for update / delete functionality
-      //- tr
-      //-     td
-      //-     td
-      //-     td
-      //-       form method=get action=/delete/deleteTask
-      //-       button delete
-      //-     td
-      //-       form method=get action=/edit/updateTask
-      //-       button delete
+	.container
+
+		h1.
+			Task List
+		ul
+			each task, i in tasklist
+				li
+					task.task= task.description
+
+		.btn-toolbar(role='toolbar', aria-label='Toolbar of buttons')
+			button.btn.btn-primary#btnGroup(type="submit")
+				i.fas.fa-edit.fa-fw.fa-lg(aria-hidden="true")
+				| Update
+			button.btn.btn-primary#btnGroup(type="submit")
+				i.fas.fa-trash-alt.fa-fw.fa-lg(aria-hidden="true")
+				| Delete
+			//- Suedo code for update / delete functionality
+			//- tr
+			//-     td
+			//-     td
+			//-     td
+			//-       form method=get action=/delete/deleteTask
+			//-       button delete
+			//-     td
+			//-       form method=get action=/edit/updateTask
+			//-       button delete
