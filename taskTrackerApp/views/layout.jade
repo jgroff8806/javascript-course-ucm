@@ -28,16 +28,23 @@ html( lang="en")
             #navbar-inverse.collapse.navbar-collapse
                 ul.nav.navbar-nav
                     li: a( href="/") 
-                        i.fas.fa-home.fa-fw.fa-lg(aria-hidden="true")
-                        |   Home
+                        i.fas.fa-home.fa-fw.fa-lg.text-info(aria-hidden="true")
+                        | Home
                     li: a( href="/tasklist" )
-                        i.fa.fa-th-list.fa-fw.fa-lg(aria-hidden="true")
-                        |   Task List
+                        i.fa.fa-th-list.fa-fw.fa-lg.text-info(aria-hidden="true")
+                        | Task List
                     li: a( href="/addtask" )
-                        i.fa.fa-plus.fa-fw.fa-lg(aria-hidden="true")
+                        i.fa.fa-plus.fa-fw.fa-lg.text-info(aria-hidden="true")
                         | Add Task
+                form.navbar-form.navbar-right(role='search')
+                    .form-group
+                        input.form-control(type='text', placeholder='Search')
+                    button.btn.btn-default(type='submit') Submit
+
+
+
 
     script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
     script( src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' )               
  
-  block content
+    block content
