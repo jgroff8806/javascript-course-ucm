@@ -11,6 +11,7 @@ router.get("/tasklist", function(req, res) {
   var db = req.db;
   var collection = db.get("usercollection");
   collection.find({}, {}, function(e, docs) {
+    console.log(docs);
     res.render("tasklist", {
       title: "Task List",
       tasklist: docs
@@ -22,6 +23,8 @@ router.get("/tasklist", function(req, res) {
 router.get("/addtask", function(req, res) {
   res.render("addtask", { title: "Add New Task" });
 });
+
+// Search //
 
 // POST to Add Task Service //
 router.post("/addtask", function(req, res) {
@@ -52,5 +55,10 @@ router.post("/addtask", function(req, res) {
     }
   );
 });
+
+// Remove Task
+router.post("/removetask", function(req, res) {
+  
+})
 
 module.exports = router;

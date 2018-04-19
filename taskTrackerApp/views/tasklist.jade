@@ -5,18 +5,22 @@ block content
 
 		h1.
 			Task List
-		ul
+		div
 			each task, i in tasklist
-				li
-					task.task= task.description
+				.thumbnail
+					.caption
+						h3 
+							task.task= task.task
+						p
+							task.task= task.description
+						.btn-toolbar(role='toolbar', aria-label='Toolbar of buttons')
+									button.btn.btn-primary#btnGroup(type="button")
+										i.fas.fa-edit.fa-fw.fa-lg(aria-hidden="true")
+										| Update
+									button.btn.btn-danger#btnGroup(type="button")
+										i.fas.fa-trash-alt.fa-fw.fa-lg(aria-hidden="true")
+										| Delete
 
-		.btn-toolbar(role='toolbar', aria-label='Toolbar of buttons')
-			button.btn.btn-primary#btnGroup(type="submit")
-				i.fas.fa-edit.fa-fw.fa-lg(aria-hidden="true")
-				| Update
-			button.btn.btn-primary#btnGroup(type="submit")
-				i.fas.fa-trash-alt.fa-fw.fa-lg(aria-hidden="true")
-				| Delete
 			//- Suedo code for update / delete functionality
 			//- tr
 			//-     td

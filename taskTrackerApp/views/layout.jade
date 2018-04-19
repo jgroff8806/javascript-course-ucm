@@ -36,7 +36,7 @@ html( lang="en")
                     li: a( href="/addtask" )
                         i.fa.fa-plus.fa-fw.fa-lg.text-info(aria-hidden="true")
                         | Add Task
-                form.navbar-form.navbar-right(role='search')
+                form.navbar-form.navbar-right(role='search' action="/search" method="post") 
                     .form-group
                         input.form-control(type='text', placeholder='Search')
                     button.btn.btn-default(type='submit')
