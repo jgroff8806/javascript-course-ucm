@@ -56,9 +56,16 @@ router.post("/addtask", function(req, res) {
   );
 });
 
-// // Remove Task
-// router.post("/removetask", function(req, res) {
-
-// })
+// Remove Task
+router.post("/removetask", function(req, res) {
+  if (err) throw err;
+  var db = db.db("taskTrackerApp");
+  var myQuery = { tasklist: _id };
+  db.collection("tasks").deleteOne(myQuery, function(err, obj) {
+    if (err) throw err;
+    console.log("1 document deleted");
+    db.close();
+  });
+});
 
 module.exports = router;
