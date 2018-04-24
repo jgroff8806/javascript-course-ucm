@@ -1,19 +1,15 @@
 extends layout
 
 block content
-  div.container-fluid.col-md-6
-    .alert.alert-info
-      h1(style='text-align: center')= title     
-      .container-fluid
-
-          .form-area.alert-warning
-            form(name="update",method="post",action="/updatetask/#{task.id}")
-              br(style='clear:both')
-              h3(style='margin-bottom: 25px; text-align: center;') Update Task Form
-              .form-group
-                input#inputTaskName.form-control(type='text', name='task', placeholder='#{task.task}', required='')
-              .form-group
-                input#inputTaskDesc.form-control(type='text', name='desc', placeholder='#{task.description}', required='')
-              button#submit.btn.btn-primary.pull-right(type='submit', name='updatetask') Update Task
-              button.btn.btn-primary.pull-left() 
-                  a(style="color: #ffffff" href="/") CANCEL 
+  .container
+    form(name="update",method="post",action="/updatetask/#{task.id}")
+      br(style='clear:both')
+      h3 Update Task Form
+      .form-group
+        input.input-block-level#inputTaskName(type='text', name='task', placeholder='#{task.task}', required='')
+      .form-group
+        input#inputTaskDesc(type='text', name='desc', placeholder='#{task.description}', required='')
+      .btn-toolbar(role="toolbar", aria-label="Toolbar of buttons")
+        button.btn.btn-primary(type='submit', name='updatetask') Update Task
+        a( href="/tasklist").btn.btn-primary#btnGroup
+          | Cancel

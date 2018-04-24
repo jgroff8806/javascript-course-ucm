@@ -1,6 +1,26 @@
 body {
   padding: 50px;
   font-family: "Roboto", sans-serif;
+  background: rgb(2, 0, 36) no-repeat center center fixed;
+  background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(43, 62, 80, 1) 35%,
+      rgba(0, 212, 255, 1) 100%
+    )
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.thumbnail {
+  box-shadow: 7px 7px 10px 0px rgba(43, 62, 83, 1);
+}
+
+h1 {
+  font-size: 28px;
 }
 
 a {
@@ -13,4 +33,12 @@ a {
 
 .navbar-brand {
   font-size: 18px;
+}
+
+.btn-toolbar {
+  display: -webkit-inline-box;
+}
+
+#btnGroup {
+  margin-right: 5px;
 }

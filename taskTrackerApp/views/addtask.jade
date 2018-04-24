@@ -2,7 +2,6 @@ extends layout
 
 block content
     .container
-    
         h1= title
         form#formAddTask(name="addtask",method="post",action="/addtask")
             input.input-block-level#inputTaskName(type="text", placeholder="Task Name", name="taskname")
