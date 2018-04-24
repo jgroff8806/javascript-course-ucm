@@ -1,4 +1,5 @@
 var express = require("express");
+var mongoose = require("mongoose");
 var path = require("path");
 var favicon = require("serve-favicon");
 var logger = require("morgan");
@@ -7,8 +8,13 @@ var bodyParser = require("body-parser");
 
 // New Code
 var mongo = require("mongodb");
-var monk = require("monk");
-var db = monk("localhost:27017/taskTrackerApp");
+// var monk = require("monk");
+// var db = monk("localhost:27017/taskTrackerApp");
+
+mongoose
+  .connect("mongodb://localhost:27017/taskTrackerApp")
+  .then(() => console.log("connected to db"))
+  .catch(() => console.log("Failed to connect to db"));
 
 var routes = require("./routes/index");
 var users = require("./routes/users");
@@ -20,10 +26,10 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
 
 // Make our db accessible to our router
-app.use(function(req, res, next) {
-  req.db = db;
-  next();
-});
+// app.use(function(req, res, next) {
+//   req.db = db;
+//   next();
+// });
 
 app.use(favicon(__dirname + "/public/favicon.ico"));
 app.use(logger("dev"));
