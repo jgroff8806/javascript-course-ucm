@@ -2,12 +2,12 @@ var express = require("express");
 var router = express.Router();
 var TaskModel = require("../models/taskmodel");
 
-/* GET home page. */
+// GET home page
 router.get("/", function(req, res, next) {
   res.render("index", { title: "Task Tracker" });
 });
 
-/* GET tasklist page. */
+// GET tasklist page
 router.get("/tasklist", function(req, res) {
   TaskModel.find(function(err, tasks) {
     if (err) {
@@ -21,13 +21,26 @@ router.get("/tasklist", function(req, res) {
 });
 
 // Remove Task
-router.get("/removetask", function(req, res) {
-  var db = req.db;
-  var collection = db.get("usercollection");
-  db.remove.collection({ _id: task });
+router.post("/removetask/:id", function(req, res) {
+  console.log("wtf");
+  console.log(req.params.id);
+  TaskModel.findByIdAndRemove(req.params.id, function(err, task) {
+    if (err) {
+      console.log(err);
+      if (err) {
+        return res.status(500).send({ message: "Could not delete task with id " + req.params.id });
+      }
+    }
+
+    if (!task) {
+      return res.status(404).send({ message: "Task not found with id " + req.params.id });
+    }
+
+    res.render("success", { message: "Task deleted successfully!" });
+  });
 });
 
-/* GET New TASK page. */
+// GET New TASK page
 router.get("/addtask", function(req, res) {
   res.render("addtask", { title: "Add New Task" });
 });
@@ -42,24 +55,22 @@ router.get("/update/:id", function(req, res) {
   });
 });
 
-router.post("/updatetask:id", function(req, res) {
-  var id = req.params.id;
-  var name = req.body.task;
-  var description = req.body.desc;
+router.post("/updatetask/:id", function(req, res) {
+  const id = req.params.id;
+  const name = req.body.task;
+  const description = req.body.desc;
 
-  TaskModel.findByIdAndUpdate(id, { task: name, description: description }, function(err, tasks) {
+  TaskModel.findByIdAndUpdate(id, { task: name, description: description }, function(err, task) {
     if (err) {
       console.log(err);
       res.status(500).send({ message: "Some error occurred while retrieving Tasks." });
     } else {
-      //res.send(tasks);
-      res.redirect("tasklist");
+      res.redirect("/tasklist");
     }
   });
-  res.send("test test test");
 });
 
-// POST to Add Task Service //
+// POST to Add Task Service
 router.post("/addtask", function(req, res) {
   // Set our internal DB variable
   // var db = req.db;

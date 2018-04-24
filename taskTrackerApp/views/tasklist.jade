@@ -17,9 +17,10 @@ block content
 							a( href="/update/#{task.id}" ).btn.btn-primary#btnGroup
 								i.fas.fa-edit.fa-fw.fa-lg(aria-hidden="true")
 								| Update
-							button.btn.btn-danger#btnGroup(type="button")
-								i.fas.fa-trash-alt.fa-fw.fa-lg(aria-hidden="true")
-								| Delete
+							form(method="post" action="/removetask/#{task.id}")
+								button(type="submit").btn.btn-danger#btnGroup
+									i.fas.fa-trash-alt.fa-fw.fa-lg(aria-hidden="true")
+									| Delete
 
 			//- Suedo code for update / delete functionality
 			//- tr
