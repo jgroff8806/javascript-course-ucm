@@ -6,10 +6,10 @@ block content
       br(style='clear:both')
       h3 Update Task Form
       .form-group
-        input.input-block-level#inputTaskName(type='text', name='task', placeholder='#{task.task}', required='')
+        input.input-block-level#inputTaskName.form-control(type='text', name='task', placeholder='#{task.task}', required='')
       .form-group
-        input#inputTaskDesc(type='text', name='desc', placeholder='#{task.description}', required='')
+        input#inputTaskDesc.form-control(type='text', name='desc', placeholder='#{task.description}', required='')
       .btn-toolbar(role="toolbar", aria-label="Toolbar of buttons")
         button.btn.btn-primary(type='submit', name='updatetask') Update Task
-        a( href="/tasklist").btn.btn-primary#btnGroup
+        a( href="/tasklist").btn.btn-primary#btnCancel
           | Cancel

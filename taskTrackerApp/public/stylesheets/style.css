@@ -42,3 +42,11 @@ a {
 #btnGroup {
   margin-right: 5px;
 }
+
+#inputTaskName {
+  height: 30px;
+}
+
+#inputTaskDesc {
+  height: 30px;
+}
