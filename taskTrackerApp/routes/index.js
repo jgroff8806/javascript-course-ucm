@@ -43,7 +43,7 @@ router.get("/addtask", function(req, res) {
 });
 
 // Navigate to Update page
-router.get("/update/:_id", function(req, res) {
+router.get("/update/:id", function(req, res) {
   TaskModel.findById(req.params.id, function(err, task) {
     if (err) {
       return res.status(404).send({ message: "Task not found" });
