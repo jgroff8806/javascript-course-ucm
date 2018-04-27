@@ -32,12 +32,17 @@ a {
   color: #00b7ff;
 }
 
+#nav-links {
+  text-shadow: 1px 1px 1px #000;
+}
+
 #navbar-inverse {
   font-size: 14px;
 }
 
 .navbar-brand {
   font-size: 18px;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .btn-toolbar {
