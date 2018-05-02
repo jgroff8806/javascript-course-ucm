@@ -6,7 +6,7 @@ block content
       br(style='clear:both')
       h3 Update Task Form
       .form-group
-        input#inputTaskName(type='text', name='task', placeholder='#{task.task}', required='')
+        input#inputTaskName(type='text', name='task', placeholder='#{task.task}', autofocus, required='', pattern="[a-zA-Z ]+", title="Text only, no numbers or special characters")
       .form-group
         input#inputTaskDesc(type='text', name='desc', placeholder='#{task.description}', required='')
       .btn-toolbar(role="toolbar", aria-label="Toolbar of buttons")
