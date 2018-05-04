@@ -20,6 +20,20 @@ body {
   background-size: cover;
 }
 
+.jumbotron {
+  height: 400px;
+  background-image: url("/images/indexBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #4e5d6c;
+  box-shadow: 7px 7px 10px 0px rgba(43, 62, 83, 1);
+}
+
+.jumbotron p {
+  padding-top: 6px;
+  font-size: 18px;
+}
+
 .thumbnail {
   box-shadow: 7px 7px 10px 0px rgba(43, 62, 83, 1);
 }
@@ -69,8 +83,44 @@ a {
 #inputTaskDesc:focus {
   width: 500px;
 }
-#backToTop {
-  text-align: right;
-  color: yellow;
-  font-size: 28px;
+
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4e5d6c;
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  box-shadow: 5px 5px 8px 0px rgba(43, 62, 83, 1);
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#return-to-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 16px;
+  top: 13px;
+  font-size: 19px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#return-to-top:hover {
+  background: #df691a;
+}
+#return-to-top:hover i {
+  color: #fff;
+  top: 5px;
 }

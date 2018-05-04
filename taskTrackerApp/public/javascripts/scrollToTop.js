@@ -1,7 +1,20 @@
-function scrollToTop() {
-  var position = document.body.scrollTop || document.documentElement.scrollTop;
-  if (position) {
-    window.scrollBy(0, -Math.max(10, Math.floor(position / 10)));
-    scrollAnimation = setTimeout("scrollToTop()", 10);
-  } else clearTimeout(scrollAnimation);
-}
+$(window).scroll(function() {
+  if ($(this).scrollTop() >= 50) {
+    // If page is scrolled more than 50px
+    // Fade in the arrow
+    $("#return-to-top").fadeIn(200);
+  } else {
+    // Else fade out the arrow
+    $("#return-to-top").fadeOut(200);
+  }
+});
+$("#return-to-top").click(function() {
+  // When arrow is clicked
+  $("body,html").animate(
+    {
+      // Scroll to top of body
+      scrollTop: 0
+    },
+    500
+  );
+});
