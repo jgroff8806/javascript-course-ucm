@@ -1,5 +1,6 @@
 body {
   padding: 50px;
+  height: 100vh;
   font-family: "Roboto", sans-serif;
   background: rgb(2, 0, 36) no-repeat center center fixed;
   background: linear-gradient(
@@ -49,4 +50,13 @@ a {
 
 #inputTaskDesc {
   height: 30px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  background-color: red;
+  left: 0;
+  right: 0;
 }
