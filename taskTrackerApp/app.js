@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 var express = require("express");
 var mongoose = require("mongoose");
 var path = require("path");
@@ -9,7 +11,7 @@ var bodyParser = require("body-parser");
 var mongo = require("mongodb");
 
 mongoose
-  .connect("mongodb://localhost:27017/taskTrackerApp")
+  .connect(process.env.MONGO_URL)
   .then(() => console.log("connected to db"))
   .catch(() => console.log("Failed to connect to db"));
 
